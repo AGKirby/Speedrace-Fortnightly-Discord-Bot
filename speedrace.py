@@ -290,7 +290,7 @@ def getRuns(category = "all"):
             s = {k: v for k, v in sorted(personalBests[cat.name].items(), key=lambda item: item[1], reverse=False)}
             place = 1
             for run in s:
-                print(personalBests[cat.name])
+                # print(personalBests[cat.name])
                 announce += "     " + str(place) + ". " + str(run) + " - " + str(convertTime(personalBests[cat.name][run])) + "\n"
                 place += 1
             if(place == 1):
@@ -487,7 +487,7 @@ try:
         #add global vars
         game = lines[0].strip() #remove newline
         dailyM = lines[1].strip().split(",")
-        print(dailyM)
+        # print(dailyM)
         curDay = int(dailyM[0])      #day number
         lastMessage = int(dailyM[1]) #last day daily message sent
         days = int(lines[2].strip())
@@ -528,17 +528,17 @@ except:
 # print(printScores("End of Phase 1"))
 # print("-----")
 # print(submitRun("Adam Any% 1:42:33 http://"))
-# # print(getRuns())
-# # print("-----")
+# print(getRuns())
+# print("-----")
 # print(submitRun("Harrison Any% 50:33 http://"))
-# # print(getRuns())
-# # print("-----")
+# print(getRuns())
+# print("-----")
 # print(submitRun("Adam Any% 39:33 http://"))
-# # print(getRuns())
-# # print("-----")
+# print(getRuns())
+# print("-----")
 # print(submitRun("Harrison Any% 51:33 http://"))
-# # print(getRuns())
-# # print("-----")
+# print(getRuns())
+# print("-----")
 # print(submitRun("Harrison Any% 29:33 http://"))
 # print(getRuns())
 # print("-----")
@@ -548,16 +548,16 @@ except:
 # print(printScores("Final"))
 
 
-print(game)
-print(curDay)
-print(lastMessage)
-print(days)
-print(winners)
-print(runs)
-print(personalBests)
-print(getRuns())
-print("-----")
-print(printScores("Finals"))
-print(getScores())
-print(getRun(3))
-print(printScores("Finals"))
+# print(game)
+# print(curDay)
+# print(lastMessage)
+# print(days)
+# print(winners)
+# print(runs)
+# print(personalBests)
+# print(getRuns())
+# print("-----")
+# print(printScores("Finals"))
+# print(getScores())
+# print(getRun(3))
+# print(printScores("Finals"))

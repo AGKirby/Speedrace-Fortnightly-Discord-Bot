@@ -49,7 +49,7 @@ async def init(ctx, data1, data2 = "", data3 = "", data4 = "", data5 = "", data6
 @commands.has_role("Moderators")
 async def setWinners(ctx, data, data2 = "", data3 = "", data4 = "", data5 = ""):
     try: 
-        print(data)
+        # print(data)
         if(data5 == ""):
             if(data2 != ""):
                 data += " " + data2
@@ -79,7 +79,7 @@ async def editRuns(ctx, runId = None, field = None, newValue = None, newValue2 =
         else: 
             user = ctx.author
             role = discord.utils.find(lambda r: r.name == 'Moderators', ctx.message.guild.roles)
-            print(user.roles)
+            # print(user.roles)
             if role in user.roles:
                 user = "Moderator"
             await ctx.send(speedrace.editRun(str(user), runId, field, newValue))
@@ -112,10 +112,10 @@ async def standings(ctx):
 @bot.command(name='submit', help="Submit a speedrun, use: -submit [category] [time] [link]")
 async def points(ctx, cat = None, time = None, link = None, name1 = "", name2 = ""):
     try:
-        print(name1 + ", " + name2)
+        # print(name1 + ", " + name2)
         if(name2 != ""):
             name1 += " " + name2
-        print(name1)
+        # print(name1)
         if(speedrace.game == None):
             await ctx.send("Error: No game currently in progress.")
         elif(cat == None or time == None or link == None):
@@ -167,7 +167,7 @@ async def sendDailyMessage(ctx, day):
 async def dailyMessage():
     f = open("channel.txt", "r")
     lines = f.readlines()
-    print(lines[0].strip())
+    # print(lines[0].strip())
     channelID = int(lines[0].strip())
     channel = bot.get_channel(channelID)
     role = discord.utils.get(channel.guild.roles, name = 'Competitors') 
@@ -181,9 +181,9 @@ async def dm_setup(dmctx = None, dmid = None):
     elif (dmid != None):
         channelID = dmid
     else: 
-        print("Error: No arguments passed to dm_setup")
+        # print("Error: No arguments passed to dm_setup")
         return
-    print(channelID)
+    # print(channelID)
     channel = bot.get_channel(channelID)
     await channel.send("This channel set for the daily messages.")
     f = open("channel.txt", "w")
