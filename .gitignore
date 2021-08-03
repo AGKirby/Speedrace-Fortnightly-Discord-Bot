@@ -1,0 +1,8 @@
+# exclude files that do not need to be public
+
+secret.env
+commands.txt
+f1messages.txt
+sample.txt
+sample2.txt
+test.py

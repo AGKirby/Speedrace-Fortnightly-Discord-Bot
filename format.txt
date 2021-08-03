@@ -1,0 +1,11 @@
+Game Name (game)
+Current Day # (curDay)
+Total Days (days)
+Phase 1 - First
+Phase 1 - Second
+Phase 1 - Third
+Phase 3 - First
+Phase 3 - Second
+Phase 3 - Third
+Categories (name,type,points)
+Runs (competitor,category,time,link)
